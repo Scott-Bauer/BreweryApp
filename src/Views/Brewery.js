@@ -3,16 +3,11 @@ import {
   useParams
 } from "react-router-dom";
 import React, { useState, useEffect, useRef } from 'react';
-import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GMap from '../components/GMap'
 import { phoneFormatter, dateFormatter } from "../Global/Formatters";
+import { endpoint } from "../Global/API";
 
-
-
-const endpoint = axios.create({
-  baseURL: "https://api.openbrewerydb.org"
-});
 
 function Brewery() {
   let { id } = useParams();

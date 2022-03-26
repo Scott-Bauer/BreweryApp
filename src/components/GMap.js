@@ -24,7 +24,7 @@ const GMap = (props) => {
  
     return (
       <GoogleMapReact
-        zoom={6}
+        zoom={5}
         center={{
           lat: position.lat, lng: position.long
         }

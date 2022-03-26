@@ -1,0 +1,70 @@
+.card-title {
+  width: inherit;
+}
+
+.cards {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px;
+}
+
+.card {
+  border: 3px solid #2d6ce0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 64px 64px 64px 64px;
+  -webkit-border-radius: 64px 64px 64px 64px;
+  -moz-border-radius: 64px 64px 64px 64px;
+  margin: 10px;
+  padding: 3px;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #1d1d1da6;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  width: 25rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card button {
+  margin: 10px;
+  background-color: #000000;
+  border: #ffffff;
+}
+
+.card a {
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.card-text {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=cards.css.map */

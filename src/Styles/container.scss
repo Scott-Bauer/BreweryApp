@@ -1,0 +1,24 @@
+@import 'cards';
+@import 'homepage';
+@import 'ThemeVariables';
+@import 'details';
+@import 'index';
+
+.container{
+    max-width: $fullViewWidth;
+    max-height: 100vh;
+    color: #fdfdfd;
+    align-items: center;
+    text-align: center;
+    font-family:  $font;    
+}
+#root{
+    width: $fullViewWidth;
+    height: 125vh;
+    background-image: url("../Images/background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+

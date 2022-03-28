@@ -3,14 +3,8 @@ import GoogleMapReact from 'google-map-react'
 import Marker from './Marker';
 import { API_KEY } from '../Global/API';
 
-
-
 const GMap = (props) => {
   const [position, setPosition] = useState([])
-
- 
- 
-
 
   useEffect(() => { 
   setPosition({

@@ -5,6 +5,7 @@
 .cards{
     align-items: center;
     padding: 3px; 
+    max-height: 125vh;
 }
 .card { 
     border: 3px solid $blueTheme;
@@ -49,3 +50,10 @@
 .card-text{
     white-space: nowrap;
 }
+.card .nourl {
+    white-space: nowrap;
+    font-size: x-small;
+    display: inline;
+    font-style: italic;
+}
+

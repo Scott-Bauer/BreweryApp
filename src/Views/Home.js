@@ -68,6 +68,7 @@ function Home(){
    
     function getList(){
       list = Object.values(breweries);
+  
 
         return (
             <div className = "cards">
@@ -78,7 +79,7 @@ function Home(){
                         <p className="card-subtile mb-2" key = {generateKey(brewery.id)}>Type: {brewery.brewery_type}</p>
                         <div className="card-text" key = {generateKey(brewery.id)}>
                         <button className="btn btn-primary" key = {generateKey(brewery.id)} value ={brewery.id} onClick={detailsPage}>See Details</button>
-                        <a key = {generateKey(brewery.id)} href={brewery.website_url} rel ="noreferrer" target="_blank" className="card-link">Navigate to Website</a>
+                        {brewery.website_url == null ? <div className = "nourl">No Website Provided</div> : <a key = {generateKey(brewery.id)} href={brewery.website_url} rel ="noreferrer" target="_blank" className="card-link">Navigate to Website</a>}
                         </div>
                         </div>
                         </div>
@@ -87,20 +88,20 @@ function Home(){
     return (
         <div className = "container">
             <div className = "header">
-<h1>Welcome to My Brewery Application</h1>
-<h4> Please Select a City to See the List of Breweries</h4>
-<div className="row">
-      <div className="col-md-4"></div>
-      <div className="col-md-4">
-        <Select styles={DropdownStyles}  options={ cities } defaultInputValue={getPrevOrDefault} onChange = { handleChange }  />
-      </div>
-      <div className="col-md-4"></div>
-    </div>
-    </div>
-        {
-        !loading ? 
-            getList() : ''
-        }
-        </div>)}
+              <h1>Welcome to My Brewery Application</h1>
+              <h4> Please Select a City to See the List of Breweries</h4>
+              <div className="row">
+                <div className="col-md-4"></div>
+                  <div className="col-md-4">
+              <Select styles={DropdownStyles}  options={ cities } defaultInputValue={getPrevOrDefault} onChange = { handleChange }  />
+                  </div>
+              <div className="col-md-4"></div>
+              </div>
+              </div>
+                 {
+                  !loading ? 
+                   getList() : ''
+                }
+               </div>)}
 
 export default Home;

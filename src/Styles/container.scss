@@ -14,11 +14,14 @@
 }
 #root{
     width: $fullViewWidth;
-    height: 125vh;
+    height: 100%;
+    overflow:auto;
+    background-color: #050e13;
     background-image: url("../Images/background.jpg");
     background-position: center;
-    background-attachment: fixed;
+    background-attachment:fixed;
     background-size: cover;
+    
 }
 
 

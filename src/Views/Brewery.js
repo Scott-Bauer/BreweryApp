@@ -32,8 +32,8 @@ function Brewery() {
       let fullAddress = (breweryData.street + " " + breweryData.city + ", " + breweryData.state + " " + breweryData.postal_code);
       fullAddress = fullAddress.replace("null", "")     
       let loc = {
-        longitude: (breweryData.longitude == null) ? -102 : breweryData.longitude,
-        latitude: (breweryData.latitude == null) ? 40.5 : breweryData.latitude,
+        longitude: breweryData.longitude,
+        latitude:  breweryData.latitude,
         address: fullAddress
       };
       setLocation(loc)
@@ -56,7 +56,7 @@ function Brewery() {
           </div>
         </div>
         <div className="mapHolder">
-          <GMap {...location} />
+          {location.longitude == null || location.latitude == null ? <div className = "geo-error">Missing geolocation information</div> : <GMap {...location} />}
           <div className="sideCard">
             <div className="card-body">
                 <p className="card-text-sm">Type: {breweryData.brewery_type}</p>

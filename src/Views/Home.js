@@ -82,16 +82,8 @@ function Home(){
                         </div>
                         </div>
                         </div>
-                )} 
-                
-                
-                </div>
-        )
-                    }
-                    
-    
-    
-
+                )}           
+                </div>)}
     return (
         <div className = "container">
             <div className = "header">
@@ -105,23 +97,10 @@ function Home(){
       <div className="col-md-4"></div>
     </div>
     </div>
-  
-
         {
         !loading ? 
             getList() : ''
         }
-        
-  
-
-
-
-    
-
-
-        </div>
-    )
-
-}
+        </div>)}
 
 export default Home;

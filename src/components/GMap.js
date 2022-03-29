@@ -9,16 +9,16 @@ const GMap = (props) => {
   useEffect(() => { 
   setPosition({
     lat:
-    parseFloat(props.latitude),
+    parseFloat(props.lat),
   long:
-    parseFloat(props.longitude)
+    parseFloat(props.lng)
   })
 }, [props])
 
  
     return (
       <GoogleMapReact
-        zoom={8}
+        zoom={14}
         center={{
           lat: position.lat, lng: position.long
         }

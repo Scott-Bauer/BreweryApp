@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GMap from '../components/GMap'
 import { phoneFormatter, dateFormatter } from "../Global/Formatters";
 import { endpoint } from "../Global/API";
+import Geocode from "../components/Geocode"
 
 
 function Brewery() {
@@ -24,7 +25,7 @@ function Brewery() {
     endpoint.get('/breweries/' + id).then(response => {
       setBreweryData(response.data)
       setLoading(false);
-    })
+    }).catch(e => console.log(e))
   }, [id])
 
   useEffect(() => {
@@ -32,8 +33,8 @@ function Brewery() {
       let fullAddress = (breweryData.street + " " + breweryData.city + ", " + breweryData.state + " " + breweryData.postal_code);
       fullAddress = fullAddress.replace("null", "")     
       let loc = {
-        longitude: breweryData.longitude,
-        latitude:  breweryData.latitude,
+        lng: breweryData.longitude,
+        lat:  breweryData.latitude,
         address: fullAddress
       };
       setLocation(loc)
@@ -56,7 +57,7 @@ function Brewery() {
           </div>
         </div>
         <div className="mapHolder">
-          {location.longitude == null || location.latitude == null ? <div className = "geo-error">Missing geolocation information</div> : <GMap {...location} />}
+          {location.longitude == null || location.latitude == null ? <Geocode {...location} /> : <GMap {...location} />}
           <div className="sideCard">
             <div className="card-body">
                 <p className="card-text-sm">Type: {breweryData.brewery_type}</p>

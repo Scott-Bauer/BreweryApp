@@ -49,7 +49,7 @@ function Home(){
       endpoint.get('/breweries?by_city='+value).then(response => {
           setBreweries(response.data); 
           setLoading(false)
-      })  
+      }).catch(e => console.log(e)) 
 
     }
     function getPrevOrDefault(defaultValue) {

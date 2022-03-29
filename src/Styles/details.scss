@@ -1,18 +1,9 @@
 @import 'ThemeVariables.scss';
 
 .detailsCard {
-    align-items: center;
-    width: 40rem;
-
-
-}
-.detailsCard .card-body{  
-    text-align: center;
-    display: inline;
-
+    width: 50rem;
 }
 .mapHolder {
-    display: inline-block;
     height: 100vh;
     width: 100%;
     position:relative;
@@ -21,7 +12,7 @@
 
 }
 .marker {
-   position: absolute;
+    position: absolute;
     transform: rotate(90deg);
     width: 0; 
     height: 0; 
@@ -43,7 +34,7 @@
 #backBtn {
     height: 40px;
     width: 100px;
-    position: absolute;
+    position: fixed;
     margin-top: 50px;
     margin-right: 125%;
     margin-left: -12%;
@@ -63,7 +54,6 @@
     -webkit-border-radius: $border-radius;
     -moz-border-radius: $border-radius;
     border: 3px solid #9f9d9d;
-    align-items: center;
     padding: 3px;
     display: inline-block;
     color: $blueTheme;
@@ -85,28 +75,55 @@ h3.card-title{
 }
 
 
-.geo-error{
-    border: 3px solid red;
-    align-items: center;
-    border-radius: $border-radius;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    margin:10px;
-    padding: 3px;
-    text-align: center;
-    display:inline;
-    color: #ffffff;
-    background-color: $cardBackground;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    width:30vw;
-    margin-top: 125px;
-    position: absolute;
-
-
+@media screen and (max-width: 700px) 
+{
+    #backBtn 
+    {
+        height: 40px;
+        width: 100vw;
+        position: fixed;
+        margin-top: 95vh;
+        width: 110vw;
+        margin-left: -15vw;
+        background-image: url(../Images/arrow-left.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    
+    }
+    .sideCard{
+       
+        margin-bottom: 20px;
+        position: fixed;
+        height: fit-content;
+        min-width: fit-content;
+        top: 60%;
+       margin-left: -24%;
+        font-weight: 600;
+        width: 100vw;
+        white-space: wrap;
+        
+    }
+    .mapHolder {
+        display: flex;
+        height: 600px;
+        width: $fullViewWidth;
+        margin-left: 20%;
+        z-index: 10;
+        align-items:flex-start;
+    
+    }
+    .detailsCard {
+        height: fit-content;
+        width: fit-content;
+        margin-left:30px;
+    }
+    .detailsCard .card-title{
+       font-size: 20px;
+        white-space: nowrap;
+        align-items: center;
+    }
+    p.card-text {
+        font-size: 2vw;
+    }  
 }
 

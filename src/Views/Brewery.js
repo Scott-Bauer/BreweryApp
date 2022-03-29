@@ -44,7 +44,7 @@ function Brewery() {
     }
   }, [breweryData])
 
-  if (mounted.current && !isLoading) {
+  if (mounted.current && location.address != null) {
     return (
       <div className="container">
         <button className="btn btn-primary" id="backBtn" onClick={returnHome}></button>
@@ -57,7 +57,7 @@ function Brewery() {
           </div>
         </div>
         <div className="mapHolder">
-          {location.longitude == null || location.latitude == null ? <Geocode {...location} /> : <GMap {...location} />}
+          {location.lng == null || location.lat == null ? <Geocode {...location} /> : <GMap {...location} />}
           <div className="sideCard">
             <div className="card-body">
                 <p className="card-text-sm">Type: {breweryData.brewery_type}</p>

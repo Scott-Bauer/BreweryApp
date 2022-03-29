@@ -2,7 +2,9 @@
 
 .detailsCard {
     align-items: center;
-    width: 50rem;
+    width: 40rem;
+
+
 }
 .detailsCard .card-body{  
     text-align: center;
@@ -92,7 +94,7 @@ h3.card-title{
     margin:10px;
     padding: 3px;
     text-align: center;
-    display: inline;
+    display:inline;
     color: #ffffff;
     background-color: $cardBackground;
     -webkit-animation-name: fadeIn;
@@ -101,9 +103,10 @@ h3.card-title{
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    width:25rem;
+    width:30vw;
     margin-top: 125px;
     position: absolute;
+
 
 }
 

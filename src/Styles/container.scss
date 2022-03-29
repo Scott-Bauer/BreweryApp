@@ -6,7 +6,6 @@
 
 .container{
     max-width: $fullViewWidth;
-    max-height: 100vh;
     color: #fdfdfd;
     align-items: center;
     text-align: center;
@@ -14,8 +13,8 @@
 }
 #root{
     width: $fullViewWidth;
-    height: 100%;
     overflow:auto;
+    height: 100vh;
     background-color: #050e13;
     background-image: url("../Images/background.jpg");
     background-position: center;

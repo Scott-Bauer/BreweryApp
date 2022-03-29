@@ -5,5 +5,6 @@ export function phoneFormatter(val){
 }
 export function dateFormatter(val){
    let date = new Date(val);
-return format(date , 'yyyy/mm/dd');
+   var formatted = date.toString().substring(4,15);
+    return formatted;
 }

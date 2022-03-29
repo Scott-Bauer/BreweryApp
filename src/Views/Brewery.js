@@ -14,7 +14,6 @@ function Brewery() {
   let { id } = useParams();
   let navigate = useNavigate();
   const [breweryData, setBreweryData] = useState([])
-  const [isLoading, setLoading] = useState(true)
   const [location, setLocation] = useState([])
   const mounted = useRef(false)
 
@@ -24,7 +23,6 @@ function Brewery() {
   useEffect(() => {
     endpoint.get('/breweries/' + id).then(response => {
       setBreweryData(response.data)
-      setLoading(false);
     }).catch(e => console.log(e))
   }, [id])
 
